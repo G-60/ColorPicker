@@ -44,12 +44,12 @@ function App() {
           <ul className='flex justify-evenly mt-5'>
             <li>
               <a href="https://github.com/G-60" target='_blank'>
-                <img className='w-8 hover:scale-110 transition-all' src="./src/assets/github-mark.svg" alt="my github" />
+                <img className='w-8 hover:scale-110 transition-all' src="./github-mark.svg" alt="my github" />
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/murad-salem-cys/" target='_blank'>
-                <img className='w-8 hover:scale-110 transition-all' src="./src/assets/InBug-Black.png" alt="my linkedin" />
+                <img className='w-8 hover:scale-110 transition-all' src="./InBug-Black.png" alt="my linkedin" />
               </a>
             </li>
           </ul>
