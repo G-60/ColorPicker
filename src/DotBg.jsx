@@ -1,4 +1,3 @@
-// component from reactbits.div
 'use client';
 import { useRef, useEffect, useCallback, useMemo } from 'react';
 import { gsap } from 'gsap';

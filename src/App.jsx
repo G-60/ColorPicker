@@ -8,7 +8,12 @@ function App() {
     setColor(val);
   }
   function copyColor() {
-    navigator.clipboard.writeText(color)
+    const btn = document.querySelector("#copy-btn");
+    navigator.clipboard.writeText(color);
+    btn.textContent = "Copied!";
+    setTimeout(() => {
+      btn.textContent = "Copy";
+    }, 2500)
   }
   // Change text color based on bg
   const isLight = (hex) => {
@@ -38,7 +43,7 @@ function App() {
           <h1 className='text-4xl font-medium col-span-2 select-none'>Color Picker</h1>
           <div className='flex justify-center items-center h-50 w-50 border relative rounded' style={{backgroundColor: color}}>
             <h2 className={`text-lg ${textClass}`}>{color}</h2>
-            <button className='absolute top-1 left-1 border rounded cursor-pointer px-1 py-1 bg-gray-50' id='copy-btn' onClick={copyColor}>Copy</button>
+            <button className='absolute top-1 left-1 border rounded cursor-pointer px-1 py-1 bg-gray-50 active:bg-gray-200' id='copy-btn' onClick={copyColor}>Copy</button>
           </div>
           <input className='w-10 h-10' type="color" value={color} id='color' onChange={handleColorChange}/>
           <ul className='flex justify-evenly mt-5'>
